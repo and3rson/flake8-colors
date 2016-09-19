@@ -3,7 +3,11 @@ ANSI colors highlight for Flake8
 
 ## Installation
 
-1. Install plugin.
+1. Install plugin:
+
+    ```
+    pip install flake8-colors
+    ```
 
 2. Use the following example format in your `.flake8` file:
 
@@ -43,6 +47,10 @@ Tags:
   - bold
   - underline
   - reset
+
+# Credits
+
+Inspired by [flake8-format-ansi](https://github.com/jayvdb/flake8-format-ansi/)
 
 # Contribution
 
