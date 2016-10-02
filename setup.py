@@ -9,7 +9,7 @@ requires = [
 setuptools.setup(
     name="flake8-colors",
     license="MIT",
-    version="0.1.1",
+    version="0.1.2",
     description="Error highlight plugin for Flake8.",
     author="Andrew Dunai",
     author_email="andrew@dun.ai",
