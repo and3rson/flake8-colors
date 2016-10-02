@@ -1,4 +1,4 @@
-# flake8-coolors
+# flake8-colors
 ANSI colors highlight for Flake8
 
 ## Installation
