@@ -28,6 +28,7 @@ There are three forms of tags:
   - ${TAG}
 
 Colors:
+
   - black
   - red
   - green
@@ -38,12 +39,14 @@ Colors:
   - white
   
 Modifiers:
+
   - fg
   - bold
   - underline
   - bg
 
 Tags:
+
   - bold
   - underline
   - reset
