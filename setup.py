@@ -1,19 +1,21 @@
 #!/usr/bin/env python2
 
 import setuptools
-import pypandoc
 
-long_description = pypandoc.convert('README.md', 'rst')
+try:
+    import pypandoc
+    long_description = pypandoc.convert('README.md', 'rst')
+except:
+    long_description = open('README.md').read()
 
 requires = [
     "flake8 > 3.0.0",
-    "pypandoc"
 ]
 
 setuptools.setup(
     name="flake8-colors",
     license="MIT",
-    version="0.1.4",
+    version="0.1.5",
     description="Error highlight plugin for Flake8.",
     long_description=long_description,
     author="Andrew Dunai",
