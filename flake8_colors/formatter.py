@@ -1,4 +1,5 @@
 from flake8.formatting import base
+import sys
 from re import sub
 
 
@@ -33,7 +34,11 @@ class ColorFormatter(base.BaseFormatter):
 
     @classmethod
     def parse_options(cls, options):
-        options.format = sub(r'\$\{([\w]+)\}', cls._replace, options.format)
+        # Only use color formatting if invoked interactively
+        if sys.__stdin__.isatty():
+            options.format = sub(r'\$\{([\w]+)\}', cls._replace, options.format)
+        else:
+            options.format = 'default'
 
     @classmethod
     def _replace(cls, match):
