@@ -17,7 +17,7 @@ requires = [
 setuptools.setup(
     name="flake8-colors",
     license="MIT",
-    version="0.1.6",
+    version="0.1.7",
     description=description,
     long_description=long_description or description,
     author="Andrew Dunai",
