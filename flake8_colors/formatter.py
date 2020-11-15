@@ -30,7 +30,7 @@ MODS = dict(
 
 class ColorFormatter(base.BaseFormatter):
     name = 'flake8-colors'
-    version = '0.1.7'
+    version = '0.1.8'
 
     @classmethod
     def parse_options(cls, options):
