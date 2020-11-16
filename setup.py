@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python
 
 import setuptools
 
@@ -14,7 +14,7 @@ requires = [
 setuptools.setup(
     name="flake8-colors",
     license="MIT",
-    version="0.1.8",
+    version="0.1.9",
     description=description,
     long_description=long_description or description,
     long_description_content_type='text/markdown',
