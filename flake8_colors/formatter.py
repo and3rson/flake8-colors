@@ -33,9 +33,29 @@ class ColorFormatter(base.BaseFormatter):
     version = '0.1.8'
 
     @classmethod
+    def add_options(cls, options):
+        options.add_option(
+            '--color',
+            type='str',
+            default='auto',
+            choices=('auto', 'always', 'never'),
+            help='when to colorize the output; can be "always", "auto" (default) or "never"',
+            parse_from_config=True,
+        )
+
+    @classmethod
     def parse_options(cls, options):
-        # Only use color formatting if invoked interactively
-        if sys.__stdin__.isatty():
+        if options.color == 'always':
+            colorized = True
+        elif options.color == 'never':
+            colorized = False
+        else:  # options.color == 'auto'
+            # Only use color formatting if invoked interactively
+            if sys.stdout.isatty():
+                colorized = True
+            else:
+                colorized = False
+        if colorized:
             options.format = sub(r'\$\{([\w]+)\}', cls._replace, options.format)
         else:
             options.format = 'default'
