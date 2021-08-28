@@ -1,6 +1,9 @@
 # flake8-colors
 ANSI colors highlight for Flake8
 
+# This project is looking for maintainers!
+## Please open an issue if you can handle this.
+
 ## Installation
 
 1. Install plugin:
