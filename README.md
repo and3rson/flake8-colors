@@ -1,8 +1,11 @@
 # flake8-colors
 ANSI colors highlight for Flake8
 
-# This project is looking for maintainers!
+# Update 1: This project is looking for maintainers!
 ## Please open an issue if you can handle this.
+
+# Update 2: flake8-colors is going to become a part of flake8 itself.
+## Please see this issue: https://github.com/PyCQA/flake8/issues/1379
 
 ## Installation
 
