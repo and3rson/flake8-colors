@@ -51,14 +51,9 @@ class ColorFormatter(base.BaseFormatter):
             colorized = False
         else:  # options.color == 'auto'
             # Only use color formatting if invoked interactively
-            if sys.stdout.isatty():
-                colorized = True
-            else:
-                colorized = False
-        if colorized:
-            options.format = sub(r'\$\{([\w]+)\}', cls._replace, options.format)
-        else:
-            options.format = 'default'
+            colorized = sys.stdout.isatty()
+        replace_with = cls._replace if colorized else ''
+        options.format = sub(r'\$\{([\w]+)\}', replace_with, options.format)
 
     @classmethod
     def _replace(cls, match):
